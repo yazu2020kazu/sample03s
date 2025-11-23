@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>すごろく</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="container">
+        <h1>すごろく</h1>
+        <div id="board" class="board" aria-label="すごろくボード"></div>
+
+        <div class="controls">
+            <div class="left">
+                <button id="rollBtn">サイコロを振る</button>
+                <button id="resetBtn">リセット</button>
+            </div>
+            <div class="right">
+                <div id="diceResult" class="dice">-</div>
+                <div id="message" class="message">スタート！</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

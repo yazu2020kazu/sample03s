@@ -1,0 +1,28 @@
+:root{
+	--bg:#f8f8f8;
+	--tile:#ffffff;
+	--accent:#3b82f6;
+	--danger:#ef4444;
+	--muted:#6b7280;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Hiragino Kaku Gothic ProN',Meiryo,sans-serif;background:var(--bg);color:#111}
+.container{max-width:980px;margin:24px auto;padding:16px}
+h1{margin:0 0 12px;font-size:28px}
+.board{display:flex;gap:8px;overflow-x:auto;padding:12px 6px 20px}
+.tile{width:96px;min-width:96px;height:96px;background:var(--tile);border-radius:8px;border:2px solid #e5e7eb;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(0,0,0,0.03)}
+.tile .num{position:absolute;top:6px;left:8px;font-size:12px;color:var(--muted)}
+.tile.special{background:linear-gradient(180deg,#fff7ed,#fff)}
+.tile.jump{background:linear-gradient(180deg,#eef2ff,#fff)}
+.token{width:28px;height:28px;border-radius:50%;background:var(--accent);box-shadow:0 4px 8px rgba(59,130,246,0.25);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.controls{display:flex;justify-content:space-between;align-items:center;padding:12px 6px}
+.controls .left button{padding:8px 12px;margin-right:8px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}
+.dice{font-size:20px;padding:8px 12px;border-radius:6px;border:1px solid #ddd;background:#fff;min-width:48px;text-align:center}
+.message{margin-top:6px;color:var(--muted);font-size:14px}
+.win{color:var(--danger);font-weight:700}
+.tile.finish{background:linear-gradient(180deg,#dcfce7,#bbf7d0)}
+
+@media (max-width:520px){
+	.tile{width:72px;min-width:72px;height:72px}
+	.token{width:22px;height:22px}
+}
